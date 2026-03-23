@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useEventListener } from '@vueuse/core';
 import { ref } from 'vue';
+import Link from '../../components/Link.vue';
 
 useEventListener('beforeunload', (e) => {
     if (isDirty.value) {
@@ -20,4 +21,9 @@ const isDirty = ref<boolean>(false)
       Toggle dirty
     </label>
   </p>
+  <Link
+    href="https://example.com"
+  >
+    External link
+  </Link>
 </template>
