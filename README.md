@@ -1,3 +1,6 @@
+This uses `throw Abort()` from https://github.com/ego-lay-atman-bay/vike/tree/router-abort for https://github.com/vikejs/vike/issues/3169
+
+
 Generated with [vike.dev/new](https://vike.dev/new) ([version 599](https://www.npmjs.com/package/create-vike/v/0.0.599)) using this command:
 
 ```sh
@@ -6,6 +9,7 @@ pnpm create vike@latest --vue --hono --cloudflare
 
 ## Contents
 
+- [Contents](#contents)
 - [Vike](#vike)
   - [Plus files](#plus-files)
   - [Routing](#routing)

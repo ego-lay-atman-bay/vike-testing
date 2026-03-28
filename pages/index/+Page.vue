@@ -2,14 +2,15 @@
 import { useEventListener } from '@vueuse/core';
 import { ref } from 'vue';
 import Link from '../../components/Link.vue';
+import { useIsDirty } from '../../composables/useIsDirty';
+
+const isDirty = useIsDirty()
 
 useEventListener('beforeunload', (e) => {
     if (isDirty.value) {
         e.preventDefault()
     }
 })
-
-const isDirty = ref<boolean>(false)
 
 </script>
 
