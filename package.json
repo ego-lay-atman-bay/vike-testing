@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "dev": "vike dev",
+    "build": "vike build",
+    "preview": "vike build && vike preview",
+    "deploy": "vike build && wrangler deploy",
+    "generate-types": "wrangler types"
+  },
+  "dependencies": {
+    "@universal-middleware/core": "^0.4.17",
+    "@vikejs/hono": "^0.2.0",
+    "hono": "^4.12.21",
+    "vike": "0.4.259",
+    "vike-vue": "^0.9.11",
+    "vue": "^3.5.34"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.37.3",
+    "@types/node": "^20.19.41",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.14",
+    "wrangler": "^4.93.1"
+  },
+  "type": "module"
+}
