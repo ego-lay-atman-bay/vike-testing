@@ -3,6 +3,7 @@
 import type { PageContextServer } from "vike/types";
 import { useConfig } from "vike-vue/useConfig";
 import type { MovieDetails } from "../types.js";
+import { render } from "vike/abort";
 
 export type Data = Awaited<ReturnType<typeof data>>;
 
@@ -11,6 +12,9 @@ export async function data(pageContext: PageContextServer) {
   const config = useConfig();
 
   const response = await fetch(`https://brillout.github.io/star-wars/api/films/${pageContext.routeParams.id}.json`);
+  if (!response.ok) {
+    throw render(404, 'Page not found')
+  }
   let movie = (await response.json()) as MovieDetails;
 
   config({
